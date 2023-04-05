@@ -1,0 +1,21 @@
+<h2>Villian list</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="onselected(hero)" [class.selected]="hero===selectedhero" >
+        <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span>{{hero.name}}
+        
+        </a>
+    </li>
+</ul>
+<app-hero-details [hero]="selectedhero"></app-hero-details>
+<!-- <app-hero-details [hero]="selectedhero"></app-hero-details>
+(click)="onselected(hero)" [class.selected]="hero===selectedhero"
+if we command  this two lines and click name then it redirects to dashboard-->
+
+
+<!-- <h1>{{hero.name}}details:</h1>
+<div><span>id:</span>{{hero.id}}</div>
+<div>
+    <label for="'">Name:</label>
+    <input type="text"  [(ngModel)]='hero.name'>
+    </div> -->

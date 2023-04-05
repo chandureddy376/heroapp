@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+h1{
+    color: rgb(61, 9, 191);
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2,h3{
+    color: red;
+    font-style: initial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
