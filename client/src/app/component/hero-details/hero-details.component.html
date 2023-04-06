@@ -5,7 +5,7 @@
         <label for="hero-name">Hero name:</label>
         <input id="hero-name" [(ngModel)]="hero.name">
     </div>
-    
+    <input type="hidden" [(ngModel)]="hero._id" /> 
 </div>
 <br/>
 <button (click)="savechanges()">save change</button><br/>

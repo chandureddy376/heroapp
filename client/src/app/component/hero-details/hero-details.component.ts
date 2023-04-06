@@ -22,8 +22,16 @@ export class HeroDetailsComponent {
   }
 
   savechanges(){
-    console.log('hi');
-  this.service.getHero;
+    const id=this.hero?._id;
+    console.log(this.hero?._id);
+  this.service.update(id,this.hero).subscribe(
+    response => {
+      console.log(response);
+    },
+    error => {
+      console.log(error);
+    }
+  );
   }
 goBack(){
   this.location.back();

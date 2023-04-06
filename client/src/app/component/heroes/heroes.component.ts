@@ -27,6 +27,9 @@ getHeroes():void{
   this.service.getHeroes().subscribe(x=>{
     console.log(x);
     this.heroes=x});
+    this.heroes.map((x)=>{
+      console.log(x.id);
+    })
 }
 
 
