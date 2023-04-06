@@ -47,8 +47,8 @@ exports.findAll = (req, res) => {
 // Find a single Tutorial with an id
 exports.findOne = (req, res) => {
   const id = req.params.id;
-console.log(id);
-  Hero.find({id:id})
+
+  Hero.findById(id)
     .then(data => {
       if (!data)
         res.status(404).send({ message: "Not found Tutorial with id " + id });
@@ -63,14 +63,11 @@ console.log(id);
 
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
-  if (!req.body.name) {
-    return res.status(400).send({
-      message: "Data to update can not be empty!"
-    });
-  }
+  console.log('hi');
 
   const id = req.params.id;
-
+console.log(id);
+console.log(req.body);
   Hero.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
     .then(data => {
       if (!data) {
